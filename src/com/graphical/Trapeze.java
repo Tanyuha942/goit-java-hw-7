@@ -1,24 +1,45 @@
-package com.Graphical;
+package com.graphical;
 
-import com.Graphical.Interface.PrintNameInterface;
+import com.graphical.intrfaces.GeometricCalculations;
 
-class Trapeze extends Shape implements PrintNameInterface {
+class Trapeze extends Shape implements GeometricCalculations {
+
+    private final float a;
+    private final float b;
+    private final float c;
+    private final float d;
+    private final float h;
+
+    public Trapeze(float a, float b, float c, float d, float h) {
+        this.a = a;
+        this.b = b;
+        this.c = c;
+        this.d = d;
+        this.h = h;
+    }
 
     @Override
     public String getShapeName() {
         return "Trapeze";
     }
 
-    public float getPerimeter(float a, float b, float c, float d) {
-        return a + b + c + d;
-    }
-
-    public float getArea(float a, float b, float h) {
-        return 0.5F * (a + b) * h;
+    @Override
+    public float getArea() {
+        return 0.5F * (this.a + this.b) * this.h;
     }
 
     @Override
-    public void printShapeName() {
-        System.out.println("Shape name is " + getShapeName());
+    public float getPerimeter() {
+        return this.a + this.b + this.c + this.d;
+    }
+
+    @Override
+    public String printPerimeter() {
+        return super.printPerimeter() + getPerimeter();
+    }
+
+    @Override
+    public String printArea() {
+        return super.printArea() + getArea();
     }
 }

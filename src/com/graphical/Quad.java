@@ -1,24 +1,37 @@
-package com.Graphical;
+package com.graphical;
 
-import com.Graphical.Interface.PrintNameInterface;
+import com.graphical.intrfaces.GeometricCalculations;
 
-class Quad extends Shape implements PrintNameInterface {
+class Quad extends Shape implements GeometricCalculations {
+
+  private float a;
+
+  public Quad(float a) {
+    this.a = a;
+  }
 
   @Override
   public String getShapeName() {
     return "Quad";
   }
 
-  public float getPerimeter(float a) {
-    return 4 * a;
-  }
-
-  public float getArea(float a) {
+  @Override
+  public float getArea() {
     return (float) Math.pow(a, 2);
   }
 
   @Override
-  public void printShapeName() {
-    System.out.println("Shape name is " + getShapeName());
+  public float getPerimeter() {
+    return 4 * a;
+  }
+
+  @Override
+  public String printPerimeter() {
+    return super.printPerimeter() + getPerimeter();
+  }
+
+  @Override
+  public String printArea() {
+    return super.printArea() + getArea();
   }
 }

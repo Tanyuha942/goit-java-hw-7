@@ -1,24 +1,39 @@
-package com.Graphical;
+package com.graphical;
 
-import com.Graphical.Interface.PrintNameInterface;
+import com.graphical.intrfaces.GeometricCalculations;
 
-class Rhombus extends Shape implements PrintNameInterface {
+class Rhombus extends Shape implements GeometricCalculations {
+
+    private final float a;
+    private final float h;
+
+    public Rhombus(float a, float h) {
+        this.a = a;
+        this.h = h;
+    }
 
     @Override
     public String getShapeName() {
         return "Rhombus";
     }
 
-    public float getPerimeter(float a) {
-        return 4 * a;
-    }
-
-    public float getArea(float a, float h) {
-        return a * h;
+    @Override
+    public float getArea() {
+        return this.a * this.h;
     }
 
     @Override
-    public void printShapeName() {
-        System.out.println("Shape name is " + getShapeName());
+    public float getPerimeter() {
+        return 4 * this.a;
+    }
+
+    @Override
+    public String printPerimeter() {
+        return super.printPerimeter() + getPerimeter();
+    }
+
+    @Override
+    public String printArea() {
+        return super.printArea() + getArea();
     }
 }

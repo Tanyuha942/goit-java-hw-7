@@ -1,7 +1,6 @@
-package com.graphical.Interface;
+package com.graphical.intrfaces;
 
 public interface PrintNameInterface {
 
   void printShapeName();
-
 }
