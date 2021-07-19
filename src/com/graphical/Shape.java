@@ -1,6 +1,5 @@
 package com.graphical;
 
-import com.graphical.intrfaces.GeometricCalculations;
 import com.graphical.intrfaces.PrintNameInterface;
 
 public abstract class Shape implements PrintNameInterface {
