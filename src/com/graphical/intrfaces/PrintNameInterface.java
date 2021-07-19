@@ -1,4 +1,4 @@
-package com.Graphical.Interface;
+package com.graphical.Interface;
 
 public interface PrintNameInterface {
 
