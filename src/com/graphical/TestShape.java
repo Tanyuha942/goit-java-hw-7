@@ -3,19 +3,20 @@ package com.graphical;
 public class TestShape {
 
   public static void main(String[] args) {
+
     Shape circle = new Circle(4.5F);
     Shape quad = new Quad(12F);
     Shape rectangle = new Rectangle(5F, 9.5F);
     Shape rhombus = new Rhombus(21.41F, 7.36F);
     Shape trapeze = new Trapeze(37.29F, 18.25F, 18.25F, 21.92F, 17.32F);
     Shape triangle = new Triangle(18.25F, 21.92F, 21.92F, 17.32F);
-
-    System.out.println(circle.getShapeName());
-    System.out.println(quad.getShapeName());
-    System.out.println(rectangle.getShapeName());
-    System.out.println(rhombus.getShapeName());
-    System.out.println(trapeze.getShapeName());
-    System.out.println(triangle.getShapeName());
+//*****************************************//
+    System.out.println(new Figure(circle).getShapeName());
+    System.out.println(new Figure(quad).getShapeName());
+    System.out.println(new Figure(rectangle).getShapeName());
+    System.out.println(new Figure(rhombus).getShapeName());
+    System.out.println(new Figure(trapeze).getShapeName());
+    System.out.println(new Figure(triangle).getShapeName());
 //*****************************************//
     System.out.println("//************************************//");
     System.out.println(circle.printPerimeter());
