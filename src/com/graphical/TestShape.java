@@ -11,12 +11,15 @@ public class TestShape {
     Shape trapeze = new Trapeze(37.29F, 18.25F, 18.25F, 21.92F, 17.32F);
     Shape triangle = new Triangle(18.25F, 21.92F, 21.92F, 17.32F);
 //*****************************************//
-    System.out.println(new Figure(circle).getShapeName());
-    System.out.println(new Figure(quad).getShapeName());
-    System.out.println(new Figure(rectangle).getShapeName());
-    System.out.println(new Figure(rhombus).getShapeName());
-    System.out.println(new Figure(trapeze).getShapeName());
-    System.out.println(new Figure(triangle).getShapeName());
+
+    Figure figure = new Figure();
+    figure.printName(circle);
+    figure.printName(quad);
+    figure.printName(rectangle);
+    figure.printName(rhombus);
+    figure.printName(trapeze);
+    figure.printName(trapeze);
+    figure.printName(triangle);
 //*****************************************//
     System.out.println("//************************************//");
     System.out.println(circle.printPerimeter());
